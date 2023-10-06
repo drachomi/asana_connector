@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample HTML with Button and Link</title>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <p>This is a sample HTML page with a button and a link:</p>
+
+    <!-- Button -->
+    <button id="myButton">
+        <a
+          href="https://app.asana.com/-/oauth_authorize
+          ?client_id=
+          &redirect_uri=http://localhost:8080/asana/callback
+          &response_type=code
+          &state=thisIsARandomString
+          &code_challenge_method=S256
+          &code_challenge=671608a33392cee13585063953a86d396dffd15222d83ef958f43a2804ac7fb2
+          &scope=default"
+        >
+          Authenticate with Asana
+        </a>
+    </button>
+
+    <script>
+        // JavaScript code can be added here to handle button clicks or perform other actions.
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", () => {
+            // You can add your custom click event handling here
+            // For example, open the link in a new tab
+            const linkUrl = button.querySelector("a").href;
+            window.open(linkUrl, "_blank");
+        });
+    </script>
+</body>
+</html>

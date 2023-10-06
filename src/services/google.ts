@@ -1,6 +1,6 @@
 import { google, drive_v3 } from "googleapis";
 
-import prisma from "loaders/prisma";
+import prisma from "../loaders/prisma";
 import { User, File } from "@prisma/client";
 
 const BASE_SCOPES = [
